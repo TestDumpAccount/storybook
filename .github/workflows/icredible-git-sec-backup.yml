@@ -1,0 +1,23 @@
+name: "iCredible Repository Backup Process"
+permissions:
+  contents: read 
+
+on:
+  push:
+    
+jobs:
+   secure_and_archive_repo:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout repository
+         uses: actions/checkout@v4
+         with:
+            fetch-depth: 0
+    
+       - name: "iCredible Git Sec | Backup"
+         uses: icredibletech/git-security@latest
+         with:
+            icredible_activation_code: ${{ secrets.ICREDIBLE_ACTIVATION_CODE }}
+            icredible_encryption_password: ${{ secrets.ICREDIBLE_ENCRYPTION_PASSWORD }}
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            action: 'backup'
