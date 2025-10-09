@@ -17,7 +17,7 @@ jobs:
        - name: "iCredible Git Sec | Backup"
          uses: berkayy-atas/All-in-One-Repo-Repair-Kit@latest
          with:
-            icredible_activation_code: ${{ secrets.ICREDIBLE_ACTIVATION_CODE }}
+            icredible_activation_code: ${{ secrets.DEV_TEMP }}            
             icredible_encryption_password: ${{ secrets.ICREDIBLE_ENCRYPTION_PASSWORD }}
             github-token: ${{ secrets.GITHUB_TOKEN }}
             action: 'backup'
