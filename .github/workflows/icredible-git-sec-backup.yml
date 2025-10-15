@@ -20,4 +20,5 @@ jobs:
             icredible_activation_code: ${{ secrets.DEV_TEMP }}            
             icredible_encryption_password: ${{ secrets.ICREDIBLE_ENCRYPTION_PASSWORD }}
             github-token: ${{ secrets.GITHUB_TOKEN }}
+            endpoint-preference: 'MULTIPLE'
             action: 'backup'
